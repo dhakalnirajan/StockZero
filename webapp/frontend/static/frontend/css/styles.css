@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f9;
+    /* Light background color */
+    color: #333;
+    /* Darker text color */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    /* White container background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+h1 {
+    color: #2c3e50;
+    /* Dark blue heading color */
+    margin-bottom: 20px;
+}
+
+.board {
+    width: 450px;
+    /* Slightly larger board */
+    height: 450px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow for board */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    /* Light border */
+}
+
+.status {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #555;
+    /* Medium gray status text */
+}
+
+#game-status.game-over {
+    color: #e74c3c;
+    /* Red color for game over status */
+}
+
+.info-area {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    /* Light gray info area background */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.info-area h2 {
+    font-size: 1.2em;
+    color: #3498db;
+    /* Blue color for info area headings */
+    margin-bottom: 10px;
+}
+
+.info-area p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #777;
+    /* Light gray info area text */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .board {
+        width: 90vw;
+        /* Responsive board width */
+        height: 90vw;
+        max-width: 400px;
+        /* Max width on smaller screens */
+        max-height: 400px;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StockZero Chess AI</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/chessboardjs/1.0.0/chessboard-1.0.0.min.css">
+        <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>StockZero Chess AI</h1>
+
+            <label for="engine-selector">Choose AI Engine:</label>
+            <select id="engine-selector">
+                <option value="rl">StockZero AI (RL)</option>
+                <option value="traditional">Traditional AI</option>
+            </select>
+
+            <div id="board" class="board"></div>
+            <div id="game-status" class="status"></div>
+
+            <div class="info-area">
+                <h2>About StockZero</h2>
+                <p>StockZero is a Reinforcement Learning based chess engine,
+                    combining strategic insights with tactical precision. Play
+                    against StockZero and experience a challenging chess game
+                    powered by AI.</p>
+                <p>This web application is built using Django, TensorFlow, and
+                    Chessboard.js. The AI engine is trained using self-play and
+                    Monte Carlo Tree Search, inspired by AlphaZero and Stockfish
+                    methodologies.</p>
+                <p>Enjoy your game!</p>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/chessboardjs/1.0.0/chessboard-1.0.0.min.js"></script>
+        <script src="{% static 'frontend/js/chess_gui.js' %}"></script>
+    </body>
+</html>
