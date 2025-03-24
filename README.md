@@ -1,5 +1,10 @@
 # StockZero: RL Chess Engine Web Application
 
+[![License](https://img.shields.io/static/v1?label=License&message=Apache&color=yellow&style=for-the-badge&)](https://github.com/dhakalnirajan/StockZero/blob/main/LICENSE)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF3F06?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
+[![Huggingface](https://img.shields.io/badge/Hugging%20Face-FF3F06?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/nirajandhakal/StockZero-v2)
+
 **StockZero** is a robust and scalable web application for playing chess against a powerful Reinforcement Learning (RL) AI engine. Built for production, it combines strategic mastery with tactical acuity, offering a challenging and engaging chess experience.
 
 **Key features include real-time game logging in PGN format to a PostgreSQL database, optimized inference with Redis caching and GPU utilization, versioned model saving, and a streamlined deployment process.**
