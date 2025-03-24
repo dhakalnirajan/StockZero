@@ -8,34 +8,96 @@
 
 ```
 stockzero/
-stockzero/ : Project Root - Core Django settings and URLs.
-engine/ : Highly optimized core chess engine components:
-model.py : PolicyValueNetwork Definition (TensorFlow/Keras).
-mcts.py : Production-grade Monte Carlo Tree Search.
-rl_agent.py : Robust Reinforcement Learning Agent (RLEngine).
-utils.py : Efficient utility functions (board repr, deterministic move encodings).
-training/ : Enhanced and versioned training scripts:
-self_play.py : Scalable Self-Play Game Generation with PGN recording.
-train_network.py : GPU-optimized Neural Network Training script with checkpointing & logging.
-data_utils.py : Efficient Data Handling for Training pipelines.
-inference/ : Production-Ready Inference Engine:
-inference_engine.py : Optimized Inference Engine (caching, GPU utilization).
-webapp/ : Production-Ready Django Web Application:
-chessgame/ : Django app for chess game API (REST API) - Robust & Scalable API with game logging to PostgreSQL DB.
-frontend/ : Django app for optimized Frontend GUI (HTML, CSS, JS).
-management/ : Custom Django Management Commands for training and utilities.
-logs/ : Dedicated directory for production-grade logging to files (engine, webapp logs).
-.env : Secure storage for environment variables (database, Redis credentials, secret key).
-models/ : Dedicated directory to store versioned and trained model weights (using StockZero-{year}-{month-day}.weights.h5 naming convention).
-manage.py : Django management script.
-requirements.txt: Python dependencies (production ready).
-README.md : Project documentation (this file).
-TRAINING_DOC.md : Comprehensive Training documentation.
-INFERENCE_DOC.md: Detailed Inference and API usage documentation.
-DEPLOYMENT_DOC.md: Production-grade Django deployment documentation (Nginx, Gunicorn, PostgreSQL, Redis).
-manage.sh : Bash script for automating common server management tasks (setup, runserver, logging, training).
-setup_server.sh : Bash script to automate PostgreSQL and Redis setup on a Linux server.
-manage_logs.sh : Bash script for log management (show, archive, combine logs).
+└───stockzero/                      : Project Root - Core Django settings and URLs.
+    │   asgi.py
+    │   __init__.py
+    │   settings.py
+    │   urls.py
+    │   wsgi.py
+    │
+    └───__pycache__/
+└───engine/                         : Highly optimized core chess engine components:
+    │   __init__.py
+    │   mcts.py                     : Production-grade Monte Carlo Tree Search.
+    │   model.py                    : PolicyValueNetwork Definition (TensorFlow/Keras).
+    │   rl_agent.py                 : Robust Reinforcement Learning Agent (RLEngine).
+    │   traditional_engine.py       : Basic traditional engine code.
+    │   utils.py                    : Efficient utility functions (board repr, deterministic move encodings).
+    │
+    └───__pycache__/
+└───inference/                      : Production-Ready Inference Engine:
+    │   __init__.py
+    │   inference_engine.py         : Optimized Inference Engine (caching, GPU utilization).
+    │
+    └───__pycache__/
+└───logs/                             : Dedicated directory for production-grade logging.
+└───management/                     : Custom Django Management Commands for training and utilities.
+    │   __init__.py
+    │
+    └───commands/
+        │   __init__.py
+        │   train_model.py          : Django Management Command for Training.
+        │
+        └───__pycache__/
+└───models/                           : Dedicated directory to store versioned model weights.
+└───static/                           : Static files root.
+    └───frontend/                     : Frontend app static files.
+        ├───css/
+        │       styles.css
+        │
+        └───js/
+                chess_gui.js
+└───templates/                        : Django templates root.
+    └───frontend/                     : Frontend app templates.
+            game.html               : Frontend HTML template for game.
+└───training/                       : Enhanced and versioned training scripts:
+    │   data_utils.py             : Efficient Data Handling for Training pipelines.
+    │   __init__.py
+    │   self_play.py              : Scalable Self-Play Game Generation with PGN recording.
+    │   train_network.py          : GPU-optimized NN Training with checkpointing & logging.
+    │
+    └───__pycache__/
+└───webapp/                           : Production-Ready Django Web Application:
+    ├───chessgame/                    : Django app for chess game API (REST API).
+    │   │   admin.py
+    │   │   apps.py
+    │   │   __init__.py
+    │   │   models.py               : Database Models - Game Record.
+    │   │   serializers.py          : REST API Serializers.
+    │   │   urls.py                 : App URLs - API Endpoints.
+    │   │   views.py                : Django REST API Views - Real-time Logging, PGN Recording.
+    │   │
+    │   └───migrations/
+    │       │   __init__.py
+    │       │
+    │       └───__pycache__/
+    │
+    └───frontend/                     : Django app for optimized Frontend GUI (HTML, CSS, JS).
+        │   admin.py
+        │   apps.py
+        │   __init__.py
+        │   urls.py                 : App URLs - Frontend Pages.
+        │   views.py                : Django Frontend Views.
+        │
+        └───static/
+        │   └───frontend/
+        │       └───css/
+        │       └───js/
+        │
+        └───templates/
+            └───frontend/
+                    game.html       : Frontend HTML template for game.
+.env                                  : Secure storage for environment variables.
+.gitattributes
+.gitignore
+INFERENCE_DOC.md                      : Detailed Inference and API usage documentation.
+manage.py                             : Django management script.
+manage.sh                             : Bash script for server management tasks.
+manage_logs.sh                        : Bash script for log management.
+README.md                             : Project documentation (this file).
+requirements.txt                      : Python dependencies (production ready).
+setup_server.sh                       : Bash script for PostgreSQL & Redis setup.
+TRAINING_DOC.md                       : Comprehensive Training documentation.
 ```
 
 ## Key Production Features
