@@ -3,3 +3,5 @@ tensorflow>=2.10
 python-chess>=1.0
 djangorestframework>=3.14
 django-redis
+channels
+channels-redis
