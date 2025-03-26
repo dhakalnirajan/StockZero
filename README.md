@@ -11,11 +11,9 @@
 
 **Key features include real-time game logging in PGN format to a PostgreSQL database, optimized inference with Redis caching and GPU utilization, versioned model saving, and a streamlined deployment process.**
 
+## Video Demo
 
-<video width="60%" height="80%" controls autoplay loop muted playsinline poster="./assets/demo_video_thumbnail.png">
-    <source src="./assets/StockZero-v2-gameplay.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-</video>
+[![StockZero Demo](assets/demo_video_thumbnail.png)](assets/StockZero-v2-gameplay.mp4)
 
 ## Project Structure
 
