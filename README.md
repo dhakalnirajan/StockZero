@@ -13,7 +13,7 @@
 
 ## Video Demo
 
-[![StockZero Demo](assets/demo_video_thumbnail.png)](assets/StockZero-v2-gameplay.mp4)
+[StockZero Gameplay Demo](assets/StockZero-v2-gameplay.mp4)
 
 ## Project Structure
 
